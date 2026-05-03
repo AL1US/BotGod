@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BotGod</title>
+        <link rel="stylesheet" href="/static/styles.css">
+    </head>
+    <body>
+        {{ message }}
+        <form action="/generate" method="post">
+            <label for="token">Токен Telegram-бота</label>
+            <br>
+            <input id="token" name="token" type="password" required>
+            <br>
+            <br>
+            <label for="prompt">Запрос для агента</label>
+            <br>
+            <textarea id="prompt" name="prompt" rows="8" required></textarea>
+            <br>
+            <button type="submit">Сгенерировать и запустить</button>
+        </form>
+    </body>
+</html>

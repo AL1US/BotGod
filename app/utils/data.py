@@ -12,3 +12,6 @@ COPY . .
 CMD ["python", "main.py"]
 """
 
+REQUIREMENTS_CONTENT = """aiogram
+python-dotenv
+"""

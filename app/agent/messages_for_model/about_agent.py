@@ -14,3 +14,17 @@ Rules:
 
 The response must be in code, without explanations, quotes, or any other symbols. CODE ONLY!
 """
+
+REQUIREMENTS_PROMPT = """
+You are a Python backend developer.
+
+Write only requirements.txt content for a Telegram bot project using aiogram 3.x.
+
+Rules:
+- Include only package names, one per line
+- Use aiogram 3.x
+- Include python-dotenv if .env is used
+- No explanations, comments, markdown, quotes, or extra symbols
+
+REQUIREMENTS ONLY!
+"""

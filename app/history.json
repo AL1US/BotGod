@@ -3,12 +3,12 @@
     {
       "type": "human",
       "data": {
-        "content": "Создай эхо бота",
+        "content": "Бот который на /start отвечает HelloWorld",
         "additional_kwargs": {},
         "response_metadata": {},
         "type": "human",
         "name": null,
-        "id": "cbf3f321-d379-4787-bb44-d6f8307ff0fe"
+        "id": "65451078-1195-4c77-b829-2d8e7b444c03"
       }
     }
   ]

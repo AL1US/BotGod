@@ -13,7 +13,7 @@ from app.utils.path import (
 
 def save_node(state: AgentState) -> dict:
     save_messages_history(path_to_history, state["messages"])
-    save_project_data(path_to_project, state["code"])
+    save_project_data(path_to_project, state["code"], state["requirements"])
 
     return {
         "is_saved": True,

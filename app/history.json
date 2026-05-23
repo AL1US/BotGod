@@ -3,12 +3,12 @@
     {
       "type": "human",
       "data": {
-        "content": "Эхо бот",
+        "content": "эхо бот",
         "additional_kwargs": {},
         "response_metadata": {},
         "type": "human",
         "name": null,
-        "id": "62ee98c9-2920-4884-a705-94b2b1734dbe"
+        "id": "af9ca02c-a77f-4954-b41a-1c04c6380cac"
       }
     }
   ]

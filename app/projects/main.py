@@ -8,14 +8,17 @@ load_dotenv()
 
 bot = Bot(token=os.getenv("BOT_TOKEN"))
 dp = Dispatcher()
+router = Router()
 
-@dp.message(Command("start"))
+@router.message(Command("start"))
 async def start(message: Message):
-    await message.answer("Привет! Я эхо бот. Напиши мне что-нибудь, и я повторю.")
+    await message.answer("Привет! Я эхо-бот. Напиши мне что-нибудь, и я повторю.")
 
-@dp.message()
+@router.message()
 async def echo(message: Message):
     await message.answer(message.text)
+
+dp.include_router(router)
 
 async def main():
     await dp.start_polling(bot)

@@ -1,0 +1,15 @@
+{
+  "messages": [
+    {
+      "type": "human",
+      "data": {
+        "content": "Эхо бот",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": "62ee98c9-2920-4884-a705-94b2b1734dbe"
+      }
+    }
+  ]
+}

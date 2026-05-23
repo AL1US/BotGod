@@ -1,16 +1,16 @@
+def clean_code_block(text: str) -> str:
+    text = text.strip()
 
-from app.agent.utils import CODE_FENCE_RE, PYTHON_START_RE
+    if text.startswith("```"):
+        lines = text.splitlines()
 
+        # убирает первую строку: ``` или ```python
+        lines = lines[1:]
 
-def clean_code_block(content: str) -> str:
-    content = content.strip()
+        # убирает последнюю строку: ```
+        if lines and lines[-1].strip() == "```":
+            lines = lines[:-1]
 
-    fenced_blocks = CODE_FENCE_RE.findall(content)
-    if fenced_blocks:
-        return fenced_blocks[0].strip()
+        text = "\n".join(lines)
 
-    start_match = PYTHON_START_RE.search(content)
-    if start_match:
-        return content[start_match.start():].strip()
-
-    return content
+    return text.strip() + "\n"

@@ -6,7 +6,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "aiogram",
-    "fastapi",
+    "fastapi[standard,standart]",
     "langchain",
     "langchain-mistralai",
     "langgraph",
@@ -14,4 +14,5 @@ dependencies = [
     "python-multipart",
     "python-dotenv",
     "uvicorn",
+    "docker>=7.1.0",
 ]

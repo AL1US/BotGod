@@ -37,11 +37,12 @@ def save_messages_history(file_path: Path, messages: Sequence[BaseMessage]):
             indent=2, # красивое формативрование
         )
 
-def save_project_data(project_path: Path, code: str, requirements: str):
+def save_project_data(project_path: Path, code: str, requirements: str, dockerfile: str):
     project_path.mkdir(parents=True, exist_ok=True) # если промежуточных папок нет, то создать их тоже, если папка уже существует - не падать с ошибкой
     
     (project_path / "main.py").write_text(code, encoding="utf-8")
     (project_path / "requirements.txt").write_text(requirements, encoding="utf-8")
+    (project_path / "Dockerfile").write_text(dockerfile, encoding="utf-8")
     
     return project_path
     

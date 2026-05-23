@@ -1,5 +1,5 @@
 import os
-from aiogram import Bot, Dispatcher, Router, F
+from aiogram import Bot, Dispatcher, Router
 from aiogram.types import Message
 from aiogram.filters import Command
 from dotenv import load_dotenv
@@ -7,8 +7,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 bot = Bot(token=os.getenv("BOT_TOKEN"))
-dp = Dispatcher()
 router = Router()
+dp = Dispatcher()
+dp.include_router(router)
 
 @router.message(Command("start"))
 async def start(message: Message):
@@ -17,8 +18,6 @@ async def start(message: Message):
 @router.message()
 async def echo(message: Message):
     await message.answer(message.text)
-
-dp.include_router(router)
 
 async def main():
     await dp.start_polling(bot)

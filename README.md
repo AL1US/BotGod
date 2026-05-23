@@ -4,5 +4,5 @@ uv run uvicorn app.main:app --reload
 ```
 or
 ```
-uv run fastapi dev app/main.py
+uv run fastapi dev app/main.py --reload
 ```
